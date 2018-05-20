@@ -17,7 +17,7 @@ RUN tar xvzf /Nuyulx-linux-wallet-gnu.tar.gz && \
 #Add a config so you can run without providing a nuyul.conf through a volume
 COPY nuyul.conf /data/.nuyul/nuyul.conf
 	
-EXPOSE 38843
+EXPOSE 38843 60203
 
 ENV HOME /data
 
