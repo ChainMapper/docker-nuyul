@@ -1,18 +1,16 @@
-# docker-nuyulx
+# docker-nuyul
 Wallet and daemon for nuyul [NYL] cryptocurrency on docker
 
 # Quickstart
-Type `docker run -it joshendriks/nuyul` and see the wallet starting.
+Type `docker run -it -e "USER=me" -e "PASSWORD=secret" -e "RPCALLOW=127.0.0.1" chainmapper/nuyul` and see the wallet starting.
+
+Alternatively type `docker run -it -v "<path_to_config>:/config/nuyul.conf" chainmapper/nuyul` to use your own config.
 
 ```
 Docker NYL wallet
 
-By: Jos Hendriks
-GitHub: https://github.com/joshendriks/
-Docker: https://hub.docker.com/r/joshendriks/
-
-BTC: 1NCZgpMMoNwL6ZeFsEQ2kRZEzzzTd5TuGk
-NYL: YhXTfgmJUZzBCWbMpDNMRsuzi4S478SA6M
+By: ChainMapper
+Website: https://chainmapper.com
 
 Starting NYL daemon...
 ```
@@ -21,11 +19,6 @@ Starting NYL daemon...
 Use a volume to store all data. The image stores it's data in `/data`. So mapping that volume will do the trick.
 
 Additionally you can override the config and wallet file using volumes pointing to `/config/nuyul.conf` and `/config/wallet.data`
-
-# Donations:
-BTC: 1NCZgpMMoNwL6ZeFsEQ2kRZEzzzTd5TuGk
-
-NYL: YhXTfgmJUZzBCWbMpDNMRsuzi4S478SA6M
 
 # License
 MIT, see LICENSE file
