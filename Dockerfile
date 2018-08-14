@@ -15,5 +15,5 @@ EXPOSE 6666 60203
 
 COPY start.sh /start.sh
 COPY gen_config.sh /gen_config.sh
-RUN chmod +X /*.sh
+RUN chmod +x /*.sh
 CMD /start.sh nuyul.conf NYL nuyuld
